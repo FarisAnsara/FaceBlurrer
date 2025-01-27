@@ -1,0 +1,7 @@
+
+train: FacesDataSet\faces\images\train
+val: d:\ProgressSoftExam\FaceBlur\FacesDataSet\faces\split\images\val
+test: d:\ProgressSoftExam\FaceBlur\FacesDataSet\faces\split\images\test
+
+nc: 1
+names: ['face']
