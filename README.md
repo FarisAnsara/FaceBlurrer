@@ -85,8 +85,7 @@ pip install -r requirements.txt
 
 ## Future Enhancements
 1. Optimize the model for real-time video processing.
-2. Improve detection accuracy for occluded and low-light faces.
-3. Extend the functionality to detect and anonymize other sensitive objects.
+2. Additional future enhancements are detailed in the `FaceDetectionModelTraining.ipynb` Jupyter Notebook.
 
 ---
 
