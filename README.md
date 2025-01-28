@@ -50,9 +50,13 @@ pip install -r requirements.txt
 ### **Model Training**
 - **Pre-trained Model Used:** YOLOv8n  
 - **Training Dataset:** Images with face annotations were used to fine-tune the model.  
+- **Approach:** Training details and results are documented in the provided Jupyter Notebook `FaceDetectionModelTraining.ipynb`. For a detailed analysis of the training process, please refer to this notebook.
+- **Pre-trained Model Used:** YOLOv8n  
+- **Training Dataset:** Images with face annotations were used to fine-tune the model.  
 - **Approach:** Training details and results are documented in the provided Jupyter Notebook.  
 
 ### **Testing**
+- The model is tested on a separate validation dataset to evaluate its performance using metrics such as Precision, Recall, mAP50, and mAP50-95. For a comprehensive analysis of the testing results, please refer to the Jupyter Notebook `FaceDetectionModelTraining.ipynb`.
 - The model is tested on a separate validation dataset to evaluate its performance using metrics such as Precision, Recall, mAP50, and mAP50-95.
 
 ### **Face Blurring**
@@ -77,4 +81,3 @@ pip install -r requirements.txt
 ## Notes
 - This project is designed to work seamlessly on both Windows and Linux platforms.
 - For any issues, ensure the paths to the dataset and pre-trained model are correctly specified.
-
