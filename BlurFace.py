@@ -1,5 +1,7 @@
 from DetectFace import DetectFace
 import cv2
+from PIL import Image, UnidentifiedImageError
+import os
 
 class BlurFace:
     def __init__(self, model_path, conf=0.325, device=0):
@@ -25,6 +27,14 @@ class BlurFace:
         Returns:
             bool: True if faces were detected and blurred, False otherwise.
         """
+        if not os.path.exists(image_path):
+            raise FileNotFoundError(f"The file '{image_path}' does not exist.")
+
+        try:
+            Image.open(image_path).verify()
+        except UnidentifiedImageError:
+            raise ValueError(f"The file '{image_path}' is not a valid image file.")
+
         image = cv2.imread(image_path)
         if image is None:
             raise ValueError(f"Image not found at {image_path}")
