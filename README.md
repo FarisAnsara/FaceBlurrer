@@ -7,7 +7,7 @@ This project implements a face blurring algorithm that detects and blurs faces i
 
 ## Dataset
 The dataset used for this project can be found on [Kaggle](https://www.kaggle.com/datasets/fareselmenshawii/face-detection-dataset).  
-- **Dataset location:** Place the downloaded ZIP file in the `FacesDataSet` directory.  
+- **Dataset location:** Place the downloaded ZIP file in the `FacesDataSet` directory, if it does not exist, run
 - **Extraction:** Use the provided Python script to extract the dataset contents.
 
 ---
@@ -38,11 +38,23 @@ pip install -r requirements.txt
      ```
 
 ### 2. **Running the Model**
-   - To run the face detection and blurring script:
+   - To run the face detection and blurring script, use the following command:
+     ```bash
+     python Main.py --input_image_path <path_to_input_image> --output_image_path <path_to_output_image>
+     ```
+   - Replace `<path_to_input_image>` and `<path_to_output_image>` with the actual file paths. 
+
+   - If the `--output_image_path` is provided only as a directory, the script will automatically save the output file in that directory, appending `_blurred` to the original input file name.
+
+   - Alternatively, you can run the script without any arguments to rely on the default input and output paths:
      ```bash
      python Main.py
      ```
-   - Replace the `input_image_path` and `output_image_path` variables in `Main.py` with the desired input and output file paths.
+     In this case, the script will:
+     - Use the default input image path specified in the `Main.py` file.
+     - Save the blurred image automatically in the `FacesDataSet/images/blurred_faces` directory with `_blurred` appended to the original file name.
+
+   - If using the default paths, ensure you have updated the `input_image_path` variable directly in the `Main.py` file as needed.
 
 ---
 
@@ -81,3 +93,4 @@ pip install -r requirements.txt
 ## Notes
 - This project is designed to work seamlessly on both Windows and Linux platforms.
 - For any issues, ensure the paths to the dataset and pre-trained model are correctly specified.
+
