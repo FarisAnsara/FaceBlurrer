@@ -29,6 +29,19 @@ pip install -r requirements.txt
 
 ---
 
+## Cloning the Repository
+To clone this repository onto your local machine:
+1. Use the following command:
+```bash
+git clone https://github.com/FarisAnsara/FaceBlurrer.git
+```
+2. Navigate to the project directory:
+```bash
+cd FaceBlurrer
+```
+
+---
+
 ## How to Run
 ### 1. **Setting Up the Environment**
    - Ensure you have Python 3.11.3 installed.
