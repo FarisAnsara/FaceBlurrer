@@ -11,8 +11,8 @@ class DetectFace:
             conf (float): Confidence threshold for detection.
             device (int): Device to use for inference (0 for GPU, -1 for CPU).
         """
-        # if not os.path.exists(model_path):
-        #     raise ValueError(f"Model file not found at {model_path}")
+        if not os.path.exists(model_path):
+            raise ValueError(f"Model file not found at {model_path}")
         self.model = YOLO(model_path)
         self.conf = conf
         self.device = device
