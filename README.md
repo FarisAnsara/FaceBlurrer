@@ -9,6 +9,15 @@ This project implements a face blurring algorithm that detects and blurs faces i
 The dataset used for this project can be found on [Kaggle](https://www.kaggle.com/datasets/fareselmenshawii/face-detection-dataset).  
 - **Dataset location:** Place the downloaded ZIP file in the `FacesDataSet` directory.
 - **Extraction:** Use the provided Python script to extract the dataset contents.
+```python
+import zipfile
+
+zip_path = os.path.join('FaceMaskDataSet', 'archive.zip')
+dataset_path = os.path.join('FaceMaskDataSet')
+
+with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+    zip_ref.extractall(dataset_path)
+```
 
 ---
 
