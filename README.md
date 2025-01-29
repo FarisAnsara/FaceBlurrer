@@ -12,8 +12,8 @@ The dataset used for this project can be found on [Kaggle](https://www.kaggle.co
 ```python
 import zipfile
 
-zip_path = os.path.join('FaceMaskDataSet', 'archive.zip')
-dataset_path = os.path.join('FaceMaskDataSet')
+zip_path = os.path.join('FacesDataSet', 'faces.zip')
+dataset_path = os.path.join('FacesDataSet', 'faces')
 
 with zipfile.ZipFile(zip_path, 'r') as zip_ref:
     zip_ref.extractall(dataset_path)
